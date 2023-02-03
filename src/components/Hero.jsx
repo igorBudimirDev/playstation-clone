@@ -15,14 +15,14 @@ const Hero = () => {
   const heroStarterData = [
     {
       id: 1,
-      active: true,
+      active: false,
       bgURL: DualSensePhone,
       heading: "DUALSENSE EDGE",
       description: "Play your way with the new customizable high-performance PS5 controller, avaliable now.",
     },
     {
       id: 2,
-      active: false,
+      active: true,
       bgURL: LiveFromPS5,
       head_img: LiveFromPS5HeadImg,
       subHeading: "Bringing you the extraordinary",
@@ -82,10 +82,13 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    const newState = heroData.map((item) => {
-      return item.active && {...item, active: false};
-    });
-    setHeroData(newState);
+    // const newState = heroData.map((item) => {
+    //   return item.active && {...item, active: false};
+    // });
+    // setHeroData(newState);
+    heroData.forEach((data) => {
+      
+    })
   }, []);
 
 

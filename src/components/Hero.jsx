@@ -1,131 +1,160 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createElement } from "react";
 import DualSensePhone from "../assets/dualsense-mobile.webp";
-import LiveFromPS5 from "../assets/live-from-ps5-mobile.webp";
+import LiveFromPS5Mobile from "../assets/live-from-ps5-mobile.webp";
 import LiveFromPS5HeadImg from "../assets/live-from-ps5-head-img.webp";
 import MLBMobile from "../assets/mlb-mobile.webp";
 import MLBHeadImg from "../assets/mlb-head-img.webp";
 import DeadSpaceMobile from "../assets/dead-space-mobile.webp";
 import DeadSpaceHeadImg from "../assets/dead-space-head-img.webp";
-import PSVRGamesMobile from "../assets/psvrgames-small.webp";
 import ForSpokenMobile from "../assets/forespoken-mobile.webp";
 import ForSpokenHeadImg from "../assets/forspoken-head-img.webp";
 import "../styles/hero.css";
-import { data } from "autoprefixer";
-const Hero = () => {
-  const heroStarterData = [
-    {
-      id: 1,
-      active: false,
-      bgURL: DualSensePhone,
-      heading: "DUALSENSE EDGE",
-      description: "Play your way with the new customizable high-performance PS5 controller, avaliable now.",
-    },
-    {
-      id: 2,
-      active: true,
-      bgURL: LiveFromPS5,
-      head_img: LiveFromPS5HeadImg,
-      subHeading: "Bringing you the extraordinary",
-      description: "Explore incredible worlds and experience the unexpected. Start your story today.",
-    },
-    {
-      id: 3,
-      active: false,
-      bgURL: MLBMobile,
-      head_img: MLBHeadImg,
-      subHeading: "Show the Game & Own The Show",
-      description: "MLB The Show 23 gets you closer than ever to living your baseball dreams on the diamond. Coming soon to PS4 & PS5",
-    },
-    {
-      id: 4,
-      active: false,
-      bgURL: DeadSpaceMobile,
-      head_img: DeadSpaceHeadImg,
-      description: "The sci-fi survival horror classic returns, rebuilt to offer a deeper and more immpersive experience, out now on PS5",
-    },
-    {
-      id: 5,
-      active: false,
-      bgURL: ForSpokenMobile,
-      head_img: ForSpokenHeadImg,
-      subHeading: "Find your fight",
-      description: "Traverse sprawling landscapes and battle monstrous creatures with a massive variety of magic abilities, out now on PS5",
-    },
-  ];
-  const [heroData, setHeroData] = useState(heroStarterData);
 
-  //functions that return classnames
-
-  const classNamesForHeroContent = (item) => {
-    return `w-screen bg-center bg-cover flex
-    ${item.id === 1 ? "h-[70vh]" : item.id === 2 ? "h-[80vh]" : item.id === 3 ? "h-[80vh]" : item.id === 4 ? "h-[80vh]" : item.id === 5 && "h-[90vh]"}
-    `;
-  };
-  const classNamesForDescription = (item) => {
-    return `description min-h-[35%] flex flex-col items-center gap-8 py-10 justify-center
-    ${
-      item.id === 1
-        ? "bg-[#18181b]"
-        : item.id === 2
-        ? ""
-        : item.id === 3
-        ? "bg-[#18181b] px-5"
-        : item.id === 4
-        ? "bg-[#18181b] px-5"
-        : item.id === 5 && "px-5 bg-[#18181b]"
-    }
-    `;
-  };
-  const classNamesForHeadImg = (item) => {
-    return `
-    ${item.id === 2 ? "max-w-[30%]" : item.id === 3 ? "max-w-[60%]" : item.id === 4 ? "max-w-[60%] pb-7" : item.id === 5 && "max-w-[80%]"}`;
-  };
-
-  useEffect(() => {
-    // const newState = heroData.map((item) => {
-    //   return item.active && {...item, active: false};
-    // });
-    // setHeroData(newState);
-    heroData.forEach((data) => {
-      
-    })
-  }, []);
-
-
-  //useEffects
-  useEffect(() => {
-    setInterval(() => {
-      heroData.forEach((item) => {});
-    }, 10000);
-  }, []);
+const DualSenseHero = () => {
   return (
-    <div className="hero">
-      {heroData.map((item) => {
-        return (
-          item.active && (
-            <div key={item.id} style={{ backgroundImage: `URL(${item.bgURL})` }} className={classNamesForHeroContent(item)}>
-              <div className="flex flex-col items-center justify-between min-h-[100%] w-[100vw]">
-                {item.heading ? (
-                  <h1 className="text-3xl text-white font-bold mt-[8em] ">{item.heading}</h1>
-                ) : (
-                  item.head_img && (
-                    <div className="flex flex-col items-center mt-[15em]">
-                      <img src={item.head_img} className={classNamesForHeadImg(item)} />
-                      <h2 className="text-xl text-white font-normal">{item.subHeading}</h2>
-                    </div>
-                  )
-                )}
-                <div className={classNamesForDescription(item)}>
-                  <h2 className="text-white text-center">{item.description}</h2>
-                  <button className="px-3 py-1 rounded-full bg-white min-w-[35%] font-semibold">Find our more</button>
-                </div>
-              </div>
-            </div>
-          )
-        );
-      })}
+    <div
+      style={{
+        backgroundImage: `URL(${DualSensePhone})`,
+      }}
+      className=" h-[70vh] bg-cover bg-center flex flex-col items-center justify-center relative"
+    >
+      <div className="flex flex-col items-center justify-center mt-[12rem] z-[10]">
+        <h1 className="text-white text-3xl font-bold">DUALSENSE EDGE</h1>
+        <h2 className="text-white text-[1.430rem] mt-[-0.5rem] font-semibold">WIRELESS CONTROLLER</h2>
+      </div>
+      <div className="dualsense__overlay bg-blend-overlay w-[100%] min-h-[45%] absolute bottom-[-4.5rem]">
+        <div className="flex flex-col text-white items-center justify-center gap-7 mt-[3.5rem]">
+          <span className="text-center">Play your way with the new customizable high-performance PS5 controller, available now.</span>
+          <button className="bg-white max-w-[40%] text-black rounded-full px-4 py-2 font-semibold">Find out more</button>
+        </div>
+      </div>
     </div>
   );
+};
+const LiveFromPS5Hero = () => {
+  return (
+    <div
+      style={{
+        backgroundImage: `URL(${LiveFromPS5Mobile})`,
+      }}
+      className="h-[65vh] bg-cover bg-center relative"
+    >
+      <div className="bg-[#0A0E2F] absolute bottom-[-7rem] w-[100%] min-h-[40%]">
+        <div className="flex flex-col items-center absolute bottom-10 gap-5">
+          <img src={LiveFromPS5HeadImg} alt="" className="max-w-[35%] max-h-[15%]" />
+          <h2 className="text-center text-white text-2xl">Bringing you the extraodrinary</h2>
+          <span className="text-center text-white">Explore incredible worlds and experience the unexpected. Start your story today.</span>
+          <button className="bg-white max-w-[40%] text-black rounded-full px-4 py-2 font-semibold">Find out more</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+const MLBHero = () => {
+  return (
+    <div
+      style={{
+        backgroundImage: `URL(${MLBMobile})`,
+      }}
+      className="h-[60vh] bg-cover bg-center relative"
+    >
+      <div className="mlb__overlay absolute bottom-[-8rem] w-[100%] min-h-[55%]">
+        <div className="flex flex-col items-center absolute bottom-10 gap-2 px-3">
+          <img src={MLBHeadImg} alt="" className="max-w-[70%]" />
+          <h2 className="text-center text-white text-2xl">Show The Game & Own The Show</h2>
+          <span className="text-center text-white">
+            MLB The Show 23 gets you closer than ever to living your baseball dreams. Coming soon to PS4 & PS5
+          </span>
+          <button className="bg-white max-w-[40%] text-black rounded-full px-4 mt-2 py-2 font-semibold">Find out more</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+const DeadSpaceHero = () => {
+  return (
+    <div
+      style={{
+        backgroundImage: `URL(${DeadSpaceMobile})`,
+      }}
+      className="h-[60vh] bg-cover bg-center relative"
+    >
+      <div className="dead-space__overlay absolute bottom-[-8rem] w-[100%] min-h-[55%]">
+        <div className="flex flex-col items-center absolute bottom-10 gap-3 px-3">
+          <img src={DeadSpaceHeadImg} alt="" className="max-w-[75%]" />
+          <h2 className="text-center text-white text-2xl">Humanity ends here</h2>
+          <span className="text-center text-white">
+            The sci-fi survival horror classic returns, rebuilt to offer a deeper and more immersive experience, out now on PS5
+          </span>
+          <button className="bg-white max-w-[40%] text-black rounded-full px-4 mt-2 py-2 font-semibold">Find out more</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+const ForSpokenHero = () => {
+  return (
+    <div
+      style={{
+        backgroundImage: `URL(${ForSpokenMobile})`,
+      }}
+      className="h-[90vh] bg-cover bg-center relative"
+    >
+      <div className="forspoken__overlay absolute bottom-[-8rem] w-[100%] min-h-[80%]">
+        <div className="flex flex-col items-center justify-start absolute bottom-7 gap-3 px-3 mb-[10em]">
+          <img src={ForSpokenHeadImg} alt="" className="max-w-[75%]" />
+          <h2 className="text-center text-white text-2xl">Humanity ends here</h2>
+          <span className="text-center text-white">
+            The sci-fi survival horror classic returns, rebuilt to offer a deeper and more immersive experience, out now on PS5
+          </span>
+          <button className="bg-white min-w-[20%] text-black rounded-full px-4 mt-2 py-2 font-semibold">Play now</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+const Hero = () => {
+  const [heroState, setHeroState] = useState("LiveFromPS5Hero");
+
+  const HeroVariants = [
+    {
+      id: 1,
+      name: "DualSenseHero"
+    },
+    {
+      id: 1,
+      name: "LiveFromPS5Hero"
+    },
+    {
+      id: 1,
+      name: "MLBHero"
+    },
+    {
+      id: 1,
+      name: "DeadSpaceHero"
+    },
+    {
+      id: 1,
+      name: "ForSpokenHero"
+    }
+  ]
+
+  const returnHero = () => {
+    switch (heroState) {
+      case "DualSenseHero":
+        return <DualSenseHero />;
+      case "LiveFromPS5Hero":
+        return <LiveFromPS5Hero />;
+      case "MLBHero":
+        return <MLBHero />;
+      case "DeadSpaceHero":
+        return <DeadSpaceHero />;
+      case "ForSpokenHero":
+        return <ForSpokenHero />;
+    }
+  };
+
+  return <div>{returnHero()}</div>;
 };
 
 export default Hero;

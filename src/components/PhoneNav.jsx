@@ -5,7 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
 
 import { SmallHeaderSonyIcon } from "../assets/icons";
-
+// uradi portfolio, stavi state da se menja sa intervalom hero sekcija
 import { FiChevronRight } from "react-icons/fi";
 const PhoneNav = () => {
   const subChildrenRef = useRef();
@@ -60,7 +60,7 @@ const PhoneNav = () => {
       </div>
       <SmallHeaderSonyIcon />
       <button className="rounded-[15px] bg-main-blue text-white px-3 py-[1px] font-semibold">Sign in</button>
-      <div className={`side-menu h-[90vh] w-screen fixed bottom-0 left-0 border-t flex flex-col bg-white pt-10 ${!sideMenu.open && "hidden"}`}>
+      <div className={`side-menu h-[90vh] w-screen fixed bottom-0 left-0 border-t z-[999] flex flex-col bg-white pt-10 ${!sideMenu.open && "hidden"}`}>
         {sideMenuState.map((btn, index) => {
           return (
             <button

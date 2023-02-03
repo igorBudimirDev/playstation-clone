@@ -1,1 +1,15 @@
+.dualsense__overlay {
+  background: linear-gradient(0deg, rgba(30, 30, 30, 1) 75%, rgba(0, 17, 109, 0.5718662464985995) 99%);
+  box-shadow: 0 -10px 10px 5px rgba(0, 17, 109, 0.5718662464985995);
+}
+.mlb__overlay {
+  background: linear-gradient(0deg, rgba(30, 30, 30, 1) 90%, rgba(31, 14, 52) 99%);
 
+}
+.dead-space__overlay {
+    background: linear-gradient(0deg, rgba(30, 30, 30, 1) 75%, rgba(43, 29, 2, 0) 99%);
+}
+
+.forspoken__overlay {
+    background: linear-gradient(0deg, rgba(30, 30, 30, 1) 75%, rgba(43, 29, 2, 0) 99%);
+}

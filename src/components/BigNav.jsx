@@ -10,9 +10,9 @@ const BigNav = () => {
   const [sideMenuState, setSideMenuState] = useState(navData);
   //functions
   const handleSubmenuButton = (item) => {
-    subChildrenRef.current.classList.add("animate-[appear_0.7s_ease]", "animation-forwards");
+    if (subChildrenRef.current) subChildrenRef.current.classList.add("animate-[appear_0.7s_ease]", "animation-forwards");
     setTimeout(() => {
-      subChildrenRef.current.classList.remove("animate-[appear_0.7s_ease]", "animation-forwards");
+      if (subChildrenRef.current) subChildrenRef.current.classList.remove("animate-[appear_0.7s_ease]", "animation-forwards");
     }, 500);
     const newState = sideMenuState.map((state) => {
       if (item.active) return { ...state, active: false };
@@ -55,41 +55,43 @@ const BigNav = () => {
           <AiOutlineSearch className="text-3xl" />
         </div>
       </div>
-      <div className="flex flex-col">
-        <div ref={subChildrenRef} className="flex h-[10em]">
-          {sideMenuState.map((item, index) => {
-            return (
-              item.active && (
-                <div key={index} className="flex gap-10 justify-center w-[100%] py-10 border-b border-b-gray-300">
-                  {item.subChildren.map((child, index) => {
-                    return (
-                      <div key={index} className="flex flex-col">
-                        <img loading="lazy" width="70" src={child.imgURL} alt="" />
-                        <span className="font-medium">{child.name}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-              )
-            );
-          })}
-        </div>
-        <div className="flex justify-center gap-7 py-5">
-          {sideMenuState.map((item, index) => {
-            return (
-              item.active &&
-              item.additionalChildren.map((child, index) => {
-                return (
-                  <div key={index} className="flex items-center max-w-[20%]">
-                    <div className="w-2 h-2 mr-2 p-1 bg-main-blue rounded-[100%]"></div>
-                    <span className="font-semibold text-center">{child}</span>
+      {!sideMenuState.every((btn) => btn.active === false) && (
+        <div className="flex flex-col">
+          <div ref={subChildrenRef} className="flex h-[10em]">
+            {sideMenuState.map((item, index) => {
+              return (
+                item.active && (
+                  <div key={index} className="flex gap-10 justify-center w-[100%] py-10 border-b border-b-gray-300">
+                    {item.subChildren.map((child, index) => {
+                      return (
+                        <div key={index} className="flex flex-col">
+                          <img loading="lazy" width="70" src={child.imgURL} alt="" />
+                          <span className="font-medium">{child.name}</span>
+                        </div>
+                      );
+                    })}
                   </div>
-                );
-              })
-            );
-          })}
+                )
+              );
+            })}
+          </div>
+          <div className="flex justify-center gap-7 py-5">
+            {sideMenuState.map((item, index) => {
+              return (
+                item.active &&
+                item.additionalChildren.map((child, index) => {
+                  return (
+                    <div key={index} className="flex items-center max-w-[20%]">
+                      <div className="w-2 h-2 mr-2 p-1 bg-main-blue rounded-[100%]"></div>
+                      <span className="font-semibold text-center">{child}</span>
+                    </div>
+                  );
+                })
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -23,6 +23,10 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(100%)" },
         },
+        appearFromBottom: {
+          "0%": { transform: "translateY(20%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
       },
     },
   },
@@ -32,5 +36,7 @@ module.exports = {
         ".animation-forwards": { "animation-fill-mode": "forwards" },
       });
     },
+    require("tailwindcss-animation-delay"),
+    require("tailwind-scrollbar-hide"),
   ],
 };

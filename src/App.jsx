@@ -1,15 +1,18 @@
 import { useState } from "react";
 import BigNav from "./components/BigNav";
-import Hero from "./components/Hero";
+import HeroMobile from "./components/HeroMobile";
+import HeroMd from "./components/HeroMd";
 import PhoneNav from "./components/PhoneNav";
+import HeroXl from "./components/HeroXl";
 
 function App() {
- 
   return (
     <div className="App">
       <PhoneNav />
       <BigNav />
-      <Hero />
+      <HeroMobile />
+      <HeroMd />
+      <HeroXl />
     </div>
   );
 }

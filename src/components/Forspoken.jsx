@@ -21,7 +21,7 @@ const Forspoken = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-7 items-center text-white text-center bg-[#26254f] md:flex-row md:px-7 xl:px-[15em] transition-all duration-75 hover:cursor-pointer">
+      <div className="flex flex-col gap-7 items-center text-white text-center bg-[#26254f] md:flex-row md:px-7 xl:px-[15em] transition-all duration-75 hover:cursor-pointer pb-10">
         <div className="max-w-[90%] flex flex-col items-center gap-5 hover:cursor-pointer transition-all duration-[0.3s] ease-out hover:translate-y-[-20px]">
           <img src={PreviewKeyart} className="rounded-[15px] shadow-lg shadow-black  " />
           <span className="font-semibold text-xl">23 great games to look forward to in 2023</span>

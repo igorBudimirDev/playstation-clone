@@ -4,7 +4,8 @@ import HeroMobile from "./components/HeroMobile";
 import HeroMd from "./components/HeroMd";
 import PhoneNav from "./components/PhoneNav";
 import HeroXl from "./components/HeroXl";
-
+import PostHero from "./components/PostHero";
+import Feel from "./components/Feel";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,8 @@ function App() {
       <HeroMobile />
       <HeroMd />
       <HeroXl />
+      <PostHero />
+      <Feel />
     </div>
   );
 }

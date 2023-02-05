@@ -8,6 +8,13 @@ import DeadSpaceMobile from "../assets/dead-space-xl.webp";
 import DeadSpaceHeadImg from "../assets/dead-space-head-img.webp";
 import ForSpokenMobile from "../assets/forspoken-xl.jpeg";
 import ForSpokenHeadImg from "../assets/forspoken-head-img.webp";
+
+import DualsenseSlider from "../assets/dulsense-slider.webp";
+import LiveFromPS5Slider from "../assets/live-from-ps5-slider.webp";
+import MLBSlider from "../assets/mlb-slider.webp";
+import DeadSpaceSlider from "../assets/dead-space-slider.webp";
+import ForSpokenSlider from "../assets/forspoken-slider.webp";
+
 import "../styles/hero.css";
 
 const DualSenseHero = () => {
@@ -16,15 +23,15 @@ const DualSenseHero = () => {
       style={{
         backgroundImage: `URL(${DualSensePhone})`,
       }}
-      className=" dualsense-main h-[29em] bg-cover bg-center flex flex-col items-center justify-center relative animate-[appear_1s_ease]"
+      className=" dualsense-main h-[40em] bg-cover bg-center flex flex-col items-center justify-center relative animate-[appear_1s_ease]"
     >
-      <div className="flex flex-col items-center justify-center mt-[12rem] z-[10] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards">
-        <h1 className="text-white text-4xl font-bold ">DUALSENSE EDGE</h1>
-        <h2 className="text-white text-[1.73rem] mt-[-0.5rem] font-semibold">WIRELESS CONTROLLER</h2>
-      </div>
-      <div className="dualsense__overlay bg-blend-overlay w-[100%] min-h-[45%] absolute bottom-[-4.5rem]">
-        <div className="flex flex-col text-white items-center justify-center gap-7 mt-[3.5rem] ">
-          <span className="text-center animate-[appearFromBottom_1s_ease] opacity-0 animation-forwards animation-delay-300">
+      <div className="dualsense__overlay bg-blend-overlay w-[55%] min-h-[100%] left-0 absolute bottom-0">
+        <div className="flex flex-col ml-[12rem] items-start justify-center gap-5 mt-[18rem] z-[10] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards">
+          <div className="flex flex-col">
+            <h1 className="text-white text-6xl font-bold ">DUALSENSE EDGE</h1>
+            <h2 className="text-white text-[2.86rem] mt-[-0.5rem] font-semibold">WIRELESS CONTROLLER</h2>
+          </div>
+          <span className="text-left text-white animate-[appearFromBottom_1s_ease] opacity-0 animation-forwards animation-delay-300 max-w-[65%]">
             Play your way with the new customizable high-performance PS5 controller, available now.
           </span>
           <button className="info-btn bg-white max-w-[40%] text-black rounded-full px-4 py-2 font-semibold animate-[appearFromBottom_1s_ease] opacity-0 animation-forwards animation-delay-600">
@@ -41,10 +48,10 @@ const LiveFromPS5Hero = () => {
       style={{
         backgroundImage: `URL(${LiveFromPS5Mobile})`,
       }}
-      className="h-[30em] bg-cover bg-center relative animate-[appear_1s_ease]"
+      className="dualsense-main h-[42em] bg-cover bg-center flex flex-col items-center justify-center relative animate-[appear_1s_ease]"
     >
-      <div className="bg-[#0A0E2F] absolute bottom-[-7rem] w-[100%] min-h-[40%]">
-        <div className="flex flex-col items-center absolute bottom-10 gap-5">
+      <div className=" dualsense__overlay bg-blend-overlay w-[55%] min-h-[100%] left-0 absolute bottom-0">
+        <div className="flex flex-col ml-[12rem] items-start justify-center gap-5 mt-[18rem] z-[10] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards">
           <img src={LiveFromPS5HeadImg} alt="" className="max-w-[35%] max-h-[15%] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards" />
           <h2 className="text-center text-white text-2xl opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
             Bringing you the extraodrinary
@@ -66,18 +73,18 @@ const MLBHero = () => {
       style={{
         backgroundImage: `URL(${MLBMobile})`,
       }}
-      className="h-[27em] bg-cover bg-center relative animate-[appear_1s_ease]"
+      className="dualsense-main h-[42em] bg-cover bg-center flex flex-col items-center justify-center relative animate-[appear_1s_ease]"
     >
-      <div className="mlb__overlay absolute bottom-[-8rem] w-[100%] min-h-[55%]">
-        <div className="flex flex-col items-center absolute bottom-10 gap-2 px-3">
-          <img src={MLBHeadImg} alt="" className="max-w-[55%] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards" />
-          <h2 className="text-center text-white text-2xl opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
+      <div className=" dualsense__overlay bg-blend-overlay w-[55%] min-h-[100%] left-0 absolute bottom-0">
+        <div className="flex flex-col ml-[12rem] items-start justify-center gap-5 mt-[18rem] z-[10] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards">
+          <img src={MLBHeadImg} alt="" className="max-w-[55%] max-h-[15%] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards" />
+          <h2 className="text-center text-white text-5xl font-light opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
             Show The Game & Own The Show
           </h2>
-          <span className="text-center text-white opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
-            MLB The Show 23 gets you closer than ever to living your baseball dreams. Coming soon to PS4 & PS5
+          <span className="text-center text-white animate-[appearFromBottom_1s_ease] opacity-0 animation-delay-300 animation-forwards">
+            MLB The Show 23 gets you closer than ever to living your baseball dreams.
           </span>
-          <button className="info-btn bg-white max-w-[40%] text-black rounded-full px-4 mt-2 py-2 font-semibold animate-[appearFromBottom_1s_ease] animation-forwards opacity-0 animation-delay-600">
+          <button className="info-btn bg-white max-w-[40%] text-black rounded-full px-4 py-2 opacity-0 animation-delay-600 font-semibold animate-[appearFromBottom_1s_ease] animation-forwards">
             Find out more
           </button>
         </div>
@@ -91,18 +98,18 @@ const DeadSpaceHero = () => {
       style={{
         backgroundImage: `URL(${DeadSpaceMobile})`,
       }}
-      className="h-[27em] bg-cover bg-center relative animate-[appear_1s_ease]"
+      className="dualsense-main h-[42em] bg-cover bg-center flex flex-col items-center justify-center relative animate-[appear_1s_ease]"
     >
-      <div className="dead-space__overlay absolute bottom-[-8rem] w-[100%] min-h-[55%]">
-        <div className="flex flex-col items-center absolute bottom-10 gap-3 px-3">
-          <img src={DeadSpaceHeadImg} alt="" className="max-w-[55%] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards" />
-          <h2 className="text-center text-white text-2xl opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
+      <div className=" dualsense__overlay bg-blend-overlay w-[55%] min-h-[100%] left-0 absolute bottom-0">
+        <div className="flex flex-col ml-[12rem] items-start justify-center gap-5 mt-[16rem] z-[10] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards">
+          <img src={DeadSpaceHeadImg} alt="" className="max-w-[55%] max-h-[15%] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards" />
+          <h2 className="text-center text-white text-5xl font-light opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
             Humanity ends here
           </h2>
-          <span className="text-center text-white opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
-            The sci-fi survival horror classic returns, rebuilt to offer a deeper and more immersive experience, out now on PS5
+          <span className="text-center text-white animate-[appearFromBottom_1s_ease] opacity-0 animation-delay-300 animation-forwards">
+            The Sci-Fi horror classic returns, out now on PS5.
           </span>
-          <button className="info-btn bg-white max-w-[40%] text-black rounded-full px-4 mt-2 py-2 font-semibold opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-600">
+          <button className="info-btn bg-white max-w-[40%] text-black rounded-full px-4 py-2 opacity-0 animation-delay-600 font-semibold animate-[appearFromBottom_1s_ease] animation-forwards">
             Find out more
           </button>
         </div>
@@ -116,18 +123,18 @@ const ForSpokenHero = () => {
       style={{
         backgroundImage: `URL(${ForSpokenMobile})`,
       }}
-      className="h-[35em] bg-cover bg-center relative animate-[appear_1s_ease]"
+      className="dualsense-main h-[42em] bg-cover bg-center flex flex-col items-center justify-center relative animate-[appear_1s_ease]"
     >
-      <div className="forspoken__overlay absolute bottom-[-8rem] w-[100%] min-h-[60%] ">
-        <div className="flex flex-col items-center justify-start absolute bottom-0 gap-3 px-3 mb-[3em]">
-          <img src={ForSpokenHeadImg} alt="" className="max-w-[60%] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards" />
-          <h2 className="text-center text-white text-2xl opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
-            Humanity ends here
+      <div className=" dualsense__overlay bg-blend-overlay w-[55%] min-h-[100%] left-0 absolute bottom-0">
+        <div className="flex flex-col ml-[12rem] items-start justify-center gap-5 mt-[16rem] z-[10] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards">
+          <img src={ForSpokenHeadImg} alt="" className="max-w-[55%] max-h-[15%] opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards" />
+          <h2 className="text-center text-white text-5xl font-light opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
+            Find your fight
           </h2>
-          <span className="text-center text-white opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-300">
-            The sci-fi survival horror classic returns, rebuilt to offer a deeper and more immersive experience, out now on PS5
+          <span className="text-left text-xl text-white animate-[appearFromBottom_1s_ease] opacity-0 animation-delay-300 animation-forwards max-w-[70%]">
+            Traverse sprawling landscapes and battle monstruous creatures with a massive variety of magic abilities, out now on PS5.
           </span>
-          <button className="info-btn bg-white min-w-[20%] text-black rounded-full px-4 mt-2 py-2 font-semibold opacity-0 animate-[appearFromBottom_1s_ease] animation-forwards animation-delay-600">
+          <button className="info-btn bg-white max-w-[40%] text-black rounded-full px-4 py-2 opacity-0 animation-delay-600 font-semibold animate-[appearFromBottom_1s_ease] animation-forwards">
             Play now
           </button>
         </div>
@@ -135,81 +142,83 @@ const ForSpokenHero = () => {
     </div>
   );
 };
+
+
 const Hero = () => {
   const heroVariants = [
     {
       active: true,
       id: 1,
       name: "DualSenseHero",
-      img: DualSensePhone,
+      img: DualsenseSlider,
     },
     {
       active: false,
       id: 2,
       name: "LiveFromPS5Hero",
-      img: LiveFromPS5Mobile,
+      img: LiveFromPS5Slider,
     },
     {
       active: false,
       id: 3,
       name: "MLBHero",
-      img: MLBMobile,
+      img: MLBSlider,
     },
     {
       active: false,
       id: 4,
       name: "DeadSpaceHero",
-      img: DeadSpaceMobile,
+      img: DeadSpaceSlider,
     },
     {
       active: false,
       id: 5,
       name: "ForSpokenHero",
-      img: ForSpokenMobile,
+      img: ForSpokenSlider,
     },
   ];
   const [heroState, setHeroState] = useState("DualSenseHero");
   const [heroVariantsState, setHeroVariantsState] = useState(heroVariants);
   const [slider, setSlider] = useState(false);
   const heroInterval = useRef();
-//   useEffect(() => {
-//     const setActiveComponent = () => {
-//       let id = 1;
-//       heroInterval.current = setInterval(() => {
-//         id === 5 ? (id = 1) : id++;
-//         const newState = heroVariantsState.map((variant) => ({
-//           ...variant,
-//           active: variant.id === id ? true : false,
-//         }));
-//         setHeroVariantsState(newState);
-//       }, 10000);
-//     };
-//     setActiveComponent();
-//     return () => {
-//       if (slider) clearInterval(heroInterval.current);
-//     };
-//   }, [slider]);
+    // useEffect(() => {
+    //   const setActiveComponent = () => {
+    //     let id = 1;
+    //     heroInterval.current = setInterval(() => {
+    //       id === 5 ? (id = 1) : id++;
+    //       const newState = heroVariantsState.map((variant) => ({
+    //         ...variant,
+    //         active: variant.id === id ? true : false,
+    //       }));
+    //       setHeroVariantsState(newState);
+    //     }, 10000);
+    //   };
+    //   setActiveComponent();
+    //   return () => {
+    //     if (slider) clearInterval(heroInterval.current);
+    //   };
+    // }, [slider]);
 
-//   useEffect(() => {
-//     heroVariantsState.map((variant) => {
-//       if (variant.active) setHeroState(variant.name);
-//     });
-//   }, [heroVariantsState]);
+    useEffect(() => {
+      heroVariantsState.map((variant) => {
+        if (variant.active) setHeroState(variant.name);
+      });
+    }, [heroVariantsState]);
 
-//   const returnHero = () => {
-//     switch (heroState) {
-//       case "DualSenseHero":
-//         return <DualSenseHero />;
-//       case "LiveFromPS5Hero":
-//         return <LiveFromPS5Hero />;
-//       case "MLBHero":
-//         return <MLBHero />;
-//       case "DeadSpaceHero":
-//         return <DeadSpaceHero />;
-//       case "ForSpokenHero":
-//         return <ForSpokenHero />;
-//     }
-//   };
+  const returnHero = () => {
+    switch (heroState) {
+      case "DualSenseHero":
+        return <DualSenseHero />;
+      case "LiveFromPS5Hero":
+        return <LiveFromPS5Hero />;
+      case "MLBHero":
+        return <MLBHero />;
+      case "DeadSpaceHero":
+        return <DeadSpaceHero />;
+      case "ForSpokenHero":
+        return <ForSpokenHero />;
+    }
+  };
 
   const handleSliderButton = (item) => {
     const id = item.id;
@@ -231,20 +240,20 @@ const Hero = () => {
   };
 
   return (
-    <div className="hidden xl:flex flex-col justify-center overflow-hidden">
+    <div className="hidden xl:flex flex-col justify-center overflow-hidden bg-gray-700">
       {returnHero()}
       <div
-        className={` bg-white w-full flex justify-center
+        className={` bg-white w-full flex justify-center gap-2 min-h-[10em]
       ${
         heroState === "DualSenseHero"
-          ? "mt-[4.5em]"
+          ? "pt-[1em]"
           : heroState === "LiveFromPS5Hero"
-          ? "mt-[7em]"
+          ? "pt-[1em]"
           : heroState === "MLBHero"
-          ? "mt-[8em]"
+          ? "pt-[1em]"
           : heroState === "DeadSpaceHero"
-          ? "mt-[8em]"
-          : heroState === "ForSpokenHero" && "mt-[8em]"
+          ? "pt-[1em]"
+          : heroState === "ForSpokenHero" && "pt-[1em]"
       }
       `}
       >
@@ -253,8 +262,9 @@ const Hero = () => {
             <button
               onClick={() => handleSliderButton(item)}
               key={item.id}
-              className="w-[6em] mt-4 h-[3.5em] rounded-[10px] mx-3 shrink-0 inline-block"
+              className={`slider-button w-[13em] mt-4 h-[7em] rounded-[10px] mx-3 shrink-0 inline-block relative ${item.active && "outline outline-offset-4 outline-[#0070CC]"}`}
             >
+              <div className="slider-button-overlay w-[100%] h-[100%] rounded-[10px] bg-gray-500 opacity-50 absolute hover:opacity-0"></div>
               <img src={item.img} className="w-[100%] h-[100%] rounded-[10px]" />
             </button>
           );

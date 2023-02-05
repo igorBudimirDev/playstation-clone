@@ -30,7 +30,9 @@ const BigNav = () => {
     setSideMenuState(newState);
   };
   const subChildrenRef = useRef();
-
+  const menuRef = useRef();
+ 
+ 
   return (
     <div className="hidden md:block">
       <div className="flex justify-end bg-black py-1 pr-3">
@@ -39,7 +41,7 @@ const BigNav = () => {
       <div className="flex justify-between px-5">
         <div className="flex items-center">
           <SmallHeaderSonyIcon />
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 pl-4">
             {sideMenuState.map((item) => {
               return (
                 <button onClick={() => handleSubmenuButton(item)} key={item.id} className="flex items-center">
@@ -56,7 +58,7 @@ const BigNav = () => {
         </div>
       </div>
       {!sideMenuState.every((btn) => btn.active === false) && (
-        <div className="flex flex-col">
+        <div ref={menuRef} className="flex flex-col">
           <div ref={subChildrenRef} className="flex h-[10em]">
             {sideMenuState.map((item, index) => {
               return (

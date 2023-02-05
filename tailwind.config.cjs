@@ -9,6 +9,7 @@ module.exports = {
         "main-blue-ultra-light": "#bfe5f2",
         "main-blue-dark": "#196480",
         "main-blue-ultra-dark": "#0d3240",
+        "main-orange": "#d53c00",
       },
       keyframes: {
         appear: {

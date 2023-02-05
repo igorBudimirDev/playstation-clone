@@ -2,6 +2,12 @@
   background: linear-gradient(0deg, rgba(30, 30, 30, 1) 75%, rgba(0, 17, 109, 0.5718662464985995) 99%);
   box-shadow: 0 -10px 10px 5px rgba(0, 17, 109, 0.5718662464985995);
 }
+@media (min-width: 1268px) {
+  .dualsense__overlay {
+    box-shadow: none;
+    background: linear-gradient(45deg, rgba(30, 30, 30, 0.215) 70%, rgba(0, 16, 109, 0) 99%);
+  }
+}
 .mlb__overlay {
   background: linear-gradient(0deg, rgba(30, 30, 30, 1) 90%, rgba(31, 14, 52) 99%);
 
@@ -16,4 +22,14 @@
 
 .info-btn {
   animation-delay: 2s;
+}
+
+.slider-button {
+  transition: 0.2s ease;
+}
+.slider-button:hover {
+  transform: translateY(-10px);
+}
+.slider-button-overlay {
+  transition: 0.15s;
 }

@@ -1,0 +1,14 @@
+.merchandise {
+    background-image: url("../assets/girl-mobile.webp");
+}
+
+@media (min-width: 768px) {
+    .merchandise {
+        background-image: url("../assets/girl-md.webp")
+    }
+}
+@media (min-width: 1280px) {
+    .merchandise {
+        background-image: url("../assets/girl-xl.webp")
+    }
+}

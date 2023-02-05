@@ -11,7 +11,7 @@ const ExplorePS4 = () => {
           Incredible games, non-stop entertainment. There's never been a better time to enjoy PS4.
         </p>
       </div>
-      <div className="flex items-center gap-2 w-full overflow-x-scroll whitespace-nonwrap scrollbar-hide">
+      <div className="flex items-center gap-2 w-full overflow-x-scroll whitespace-nonwrap scrollbar-hide pb-5">
         <div className="flex flex-col items-center min-w-[20em] min-h-[20em] gap-3">
           <img src={ExplorePS4Img} alt="" className="max-w-[80%]"/>
           <h2 className="text-2xl xl:text-3xl">PlayStation 4</h2>

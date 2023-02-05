@@ -10,6 +10,8 @@ import Forspoken from "./components/Forspoken";
 import NewReleases from "./components/NewReleases";
 import ExplorePS4 from "./components/ExplorePS4";
 import Merchandise from "./components/Merchandise";
+import FollowUs from "./components/FollowUs";
+
 function App() {
   return (
     <div className="App">
@@ -24,6 +26,7 @@ function App() {
       <NewReleases />
       <ExplorePS4 />
       <Merchandise />
+      <FollowUs />
     </div>
   );
 }

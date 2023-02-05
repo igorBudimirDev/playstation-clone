@@ -65,7 +65,7 @@ const NewReleases = () => {
   ];
   console.log(games.length);
   return (
-    <div className="bg-[#121314] flex flex-col gap-10 pt-10 items-center">
+    <div className="bg-[#121314] flex flex-col gap-10 pt-10 items-center pb-7">
       <div className="flex flex-col text-white text-center gap-3">
         <h2 className="font-light text-xl xl:text-4xl">New releases</h2>
         <h3 className="font-semibold text-xl xl:text-2xl">Great PS5 and PS4 games available now</h3>

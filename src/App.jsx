@@ -8,7 +8,8 @@ import PostHero from "./components/PostHero";
 import Feel from "./components/Feel";
 import Forspoken from "./components/Forspoken";
 import NewReleases from "./components/NewReleases";
-
+import ExplorePS4 from "./components/ExplorePS4";
+import Merchandise from "./components/Merchandise";
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,8 @@ function App() {
       <Feel />
       <Forspoken />
       <NewReleases />
+      <ExplorePS4 />
+      <Merchandise />
     </div>
   );
 }

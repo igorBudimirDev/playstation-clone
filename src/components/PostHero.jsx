@@ -104,7 +104,7 @@ const PostHero = () => {
           return (
             item.active && (
               <div key={item.id} className="flex flex-col lg:flex-row-reverse justify-center min-h-[30em] xl:min-h-[40em] items-center">
-                <div className="animate-[appear_0.2s_ease-in]">
+                <div className="animate-[appear_0.4s_ease-in]">
                   <picture className="flex justify-center">
                     <source srcSet={item.mobile_url} media="(min-width: 320px)" sizes="768px" />
                     <source srcSet={item.md_url} media="(min-width: 768px)" sizes="1280px" />

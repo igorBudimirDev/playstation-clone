@@ -1,0 +1,14 @@
+.forspoken-2 {
+  background-image: url("../assets/forspoken2-mobile.webp");
+}
+
+@media (min-width: 768px) {
+  .forspoken-2 {
+    background-image: url("../assets/forspoken2-md.webp");
+  }
+}
+@media (min-width: 1280px) {
+  .forspoken-2 {
+    background-image: url("../assets/forspoken2-xl.webp");
+  }
+}

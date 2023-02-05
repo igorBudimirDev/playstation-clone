@@ -6,6 +6,9 @@ import PhoneNav from "./components/PhoneNav";
 import HeroXl from "./components/HeroXl";
 import PostHero from "./components/PostHero";
 import Feel from "./components/Feel";
+import Forspoken from "./components/Forspoken";
+import NewReleases from "./components/NewReleases";
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +19,8 @@ function App() {
       <HeroXl />
       <PostHero />
       <Feel />
+      <Forspoken />
+      <NewReleases />
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.ps-plus-monthly {
+    background-image: url("../assets/yellow-banner-mobile.webp");
+}
+
+@media (min-width: 1280px) {
+    .ps-plus-monthly {
+        background-image: url("../assets/yellow-banner-xl.webp")
+    }
+}

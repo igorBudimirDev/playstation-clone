@@ -1,8 +1,10 @@
+import ShopHero from "./ShopHero"
+
 const Shop = () => {
   return (
-    <div>
-        Test Shop
-    </div>
+    <>
+      <ShopHero />
+    </>
   )
 }
 

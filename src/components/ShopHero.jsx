@@ -4,7 +4,7 @@ const ShopHero = () => {
   return (
     <div className="flex flex-col md:gap-5 transition-all duration-75">
       <div className="flex flex-col gap-2 xl:pl-[5em] py-5 transition-all duration-75">
-        <h2 className="text-4xl font-light">Shop Directly From PlayStation</h2>
+        <h2 className="text-5xl font-light">Shop Directly From PlayStation</h2>
         <p className="text-main-blue font-semibold">Exclusives, Bundles, and more</p>
       </div>
       <div className="flex flex-col gap-5 xl:flex-row xl:justify-center xl:gap-11 transition-all duration-75">

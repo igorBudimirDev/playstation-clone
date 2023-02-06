@@ -8,6 +8,11 @@ import DeadSpaceMobile from "../assets/dead-space-mobile.webp";
 import DeadSpaceHeadImg from "../assets/dead-space-head-img.webp";
 import ForSpokenMobile from "../assets/forespoken-mobile.webp";
 import ForSpokenHeadImg from "../assets/forspoken-head-img.webp";
+import DualsenseSlider from "../assets/dulsense-slider.webp";
+import PS5Slider from "../assets/live-from-ps5-slider.webp";
+import MLBSlider from "../assets/mlb-slider.webp";
+import DeadSpaceSlider from "../assets/dead-space-slider.webp";
+import ForspokenSlider from "../assets/forspoken-slider.webp";
 import "../styles/hero.css";
 
 const DualSenseHero = () => {
@@ -142,30 +147,35 @@ const Hero = () => {
       id: 1,
       name: "DualSenseHero",
       img: DualSensePhone,
+      slider_img: DualsenseSlider,
     },
     {
       active: false,
       id: 2,
       name: "LiveFromPS5Hero",
       img: LiveFromPS5Mobile,
+      slider_img: PS5Slider,
     },
     {
       active: false,
       id: 3,
       name: "MLBHero",
       img: MLBMobile,
+      slider_img: MLBSlider,
     },
     {
       active: false,
       id: 4,
       name: "DeadSpaceHero",
       img: DeadSpaceMobile,
+      slider_img: DeadSpaceSlider,
     },
     {
       active: false,
       id: 5,
       name: "ForSpokenHero",
       img: ForSpokenMobile,
+      slider_img: ForspokenSlider,
     },
   ];
   const [heroState, setHeroState] = useState("DualSenseHero");
@@ -255,7 +265,7 @@ const Hero = () => {
               key={item.id}
               className="w-[10.5em] mt-4 h-[6em] rounded-[10px] mx-3 shrink-0 inline-block"
             >
-              <img src={item.img} className="w-[100%] h-[100%] rounded-[10px]" />
+              <img src={item.slider_img} className="w-[100%] h-[100%] rounded-[10px]" />
             </button>
           );
         })}

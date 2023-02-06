@@ -4,7 +4,7 @@ import { TbWorld } from "react-icons/tb";
 import Esrb from "../assets/esrb.svg"
 const Footer = () => {
   return (
-    <div className=" bg-main-blue flex flex-col py-[3rem] gap-10 md:gap-0 md:py-[5rem] transition-all duration-75 md:items-center xl:items-center">
+    <div className=" bg-main-blue flex flex-col py-[3rem] md:px-10 xl:px-0 gap-10 md:py-[5rem] transition-all duration-75 md:items-center xl:items-center">
       <div className="flex flex-col items-start pl-10 md:pl-0 gap-5 md:flex-row xl:items-start xl:w-full xl:justify-around transition-all duration-75">
         <div className="flex flex-col gap-7 xl:hidden">
           <SonyFooterIcon className="" />
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center text-white md:flex-row xl:w-[60%] xl:justify-between">
+      <div className="flex flex-col gap-5 items-center text-white md:flex-row xl:w-[60%] xl:justify-between">
         <span>©2023 Sony Interactive Entertainment LLC</span>
         <img src={Esrb} className="w-[3em]" />
       </div>

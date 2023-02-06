@@ -1,0 +1,17 @@
+.cart-content::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+ 
+.cart-content::-webkit-scrollbar-track {
+   background: #f1f1f1;
+ }
+ 
+.cart-content::-webkit-scrollbar-thumb {
+   background: #888;
+   border-radius: 5px;
+ }
+ 
+.cart-content::-webkit-scrollbar-thumb:hover {
+   background: #555;
+ }

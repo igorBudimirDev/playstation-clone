@@ -46,12 +46,12 @@ const Shop = () => {
                     <div className="flex items-start">
                       <img className="" src={item.cart_img} alt="" />
                       <div className="flex flex-col">
-                        <span className="max-w-[60%]">{item.name}</span>
-                        <span className="font-bold">{}</span>
+                        <span className="max-w-[50%]">{item.name}</span>
+                        <span className="font-bold">{item.price}</span>
                       </div>
                     </div>
                     <div>
-                      <span>Qty: 1</span>
+                      <span className="">Qty: 1</span>
                     </div>
                   </div>
                 );

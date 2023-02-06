@@ -5,6 +5,10 @@ import PS5Console from "../assets/shop-console-god-of-war.webp";
 import PS5ConsoleDigital from "../assets/shop-console-god-of-war.webp";
 import PS5CartImg from "../assets/ps5-cart-img.webp";
 import GodOfWarCartImg from "../assets/god-of-war-cart-img.webp";
+import PSVRShop from "../assets/ps-vr-shop-item.webp";
+import PSVRForzaShop from "../assets/ps-vr-forza-shop-item.webp";
+import PSSVRenseShop from "../assets/ps-vr-sense-shop-item.png";
+import PSVRMini from "../assets/ps-vr-mini-cart.webp";
 export const shopItemsSlice = createSlice({
   name: "shopItems",
   initialState: {
@@ -40,6 +44,32 @@ export const shopItemsSlice = createSlice({
         price: 399.99,
         img: PS5ConsoleDigital,
         cart_img: PS5CartImg,
+      },
+    ],
+    VRs: [
+      {
+        id: 1,
+        available: true,
+        name: "PlayStation VR2",
+        price: 549.99,
+        img: PSVRShop,
+        cart_img: PSVRMini,
+      },
+      {
+        id: 2,
+        available: true,
+        name: "PlayStation®VR2 Horizon Call of the Mountain™ Bundle",
+        price: 599.99,
+        img: PSVRForzaShop,
+        cart_img: PSVRMini,
+      },
+      {
+        id: 3,
+        available: true,
+        name: "PlayStation VR2 Sense™ Controller Charging Station",
+        price: 49.99,
+        img: PSSVRenseShop,
+        cart_img: PSVRMini,
       },
     ],
   },

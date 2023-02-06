@@ -4,6 +4,9 @@ import ShopPS5Consoles from "./ShopPS5Consoles";
 import { useSelector } from "react-redux";
 import { GiShoppingCart } from "react-icons/gi";
 import "../styles/shop.css";
+import ShopDualsense from "./ShopDualsense";
+import ShopVrs from "./ShopVrs";
+import ShopPSExperience from "./ShopPSExperience";
 
 const Shop = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -23,6 +26,9 @@ const Shop = () => {
     <>
       <ShopHero />
       <ShopPS5Consoles />
+      <ShopDualsense />
+      <ShopVrs />
+      <ShopPSExperience />
       <div className="fixed top-[10%] right-[3%]">
         <button
           onClick={handleCartButton}

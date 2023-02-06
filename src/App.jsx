@@ -1,34 +1,37 @@
-import { useState } from "react";
+import { createBrowserRouter, createRoutesFromElements, Route, Outlet, RouterProvider } from "react-router-dom";
 import BigNav from "./components/BigNav";
-import HeroMobile from "./components/HeroMobile";
-import HeroMd from "./components/HeroMd";
 import PhoneNav from "./components/PhoneNav";
-import HeroXl from "./components/HeroXl";
-import PostHero from "./components/PostHero";
-import Feel from "./components/Feel";
-import Forspoken from "./components/Forspoken";
-import NewReleases from "./components/NewReleases";
-import ExplorePS4 from "./components/ExplorePS4";
-import Merchandise from "./components/Merchandise";
-import FollowUs from "./components/FollowUs";
+import Home from "./components/Home";
+import Shop from "./components/Shop";
 
 function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Root />}>
+        <Route index element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+      </Route>
+    )
+  );
+
   return (
     <div className="App">
-      <PhoneNav />
-      <BigNav />
-      <HeroMobile />
-      <HeroMd />
-      <HeroXl />
-      <PostHero />
-      <Feel />
-      <Forspoken />
-      <NewReleases />
-      <ExplorePS4 />
-      <Merchandise />
-      <FollowUs />
+      <RouterProvider  router={router}/>
     </div>
   );
 }
+
+const Root = () => {
+  return (
+    <>
+      <PhoneNav />
+      <BigNav />
+
+      <div>
+        <Outlet />
+      </div>
+    </>
+  );
+};
 
 export default App;

@@ -4,6 +4,7 @@ import { navData } from "../assets/navData";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { AiOutlineSearch } from "react-icons/ai";
 import SonyLogo from "../assets/sony-logo.svg";
+import { Link } from "react-router-dom";
 
 const BigNav = () => {
   //useStates
@@ -66,10 +67,10 @@ const BigNav = () => {
                   <div key={index} className="flex gap-10 justify-center w-[100%] py-10 border-b border-b-gray-300">
                     {item.subChildren.map((child, index) => {
                       return (
-                        <div key={index} className="flex flex-col">
+                        <Link to={`${child.link}`} key={index} className="flex flex-col">
                           <img loading="lazy" width="70" src={child.imgURL} alt="" />
                           <span className="font-medium">{child.name}</span>
-                        </div>
+                        </Link>
                       );
                     })}
                   </div>

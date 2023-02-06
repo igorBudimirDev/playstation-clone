@@ -32,8 +32,7 @@ const BigNav = () => {
   };
   const subChildrenRef = useRef();
   const menuRef = useRef();
- 
- 
+
   return (
     <div className="hidden md:block">
       <div className="flex justify-end bg-black py-1 pr-3">
@@ -41,7 +40,9 @@ const BigNav = () => {
       </div>
       <div className="flex justify-between px-5">
         <div className="flex items-center">
-          <SmallHeaderSonyIcon />
+          <Link to="/">
+            <SmallHeaderSonyIcon />
+          </Link>
           <div className="flex items-center gap-5 pl-4">
             {sideMenuState.map((item) => {
               return (

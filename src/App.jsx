@@ -1,6 +1,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route, Outlet, RouterProvider } from "react-router-dom";
 import BigNav from "./components/BigNav";
 import PhoneNav from "./components/PhoneNav";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 
@@ -26,10 +27,10 @@ const Root = () => {
     <>
       <PhoneNav />
       <BigNav />
-
       <div>
         <Outlet />
       </div>
+      <Footer />
     </>
   );
 };

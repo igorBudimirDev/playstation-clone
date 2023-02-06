@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { GiShoppingCart } from "react-icons/gi";
 import { addItemToCart, removeItemFromCart, clearCart } from "../features/cartSlice";
-const ShopVrs = () => {
-  const consoleData = useSelector((state) => state.shopItems.VRs);
+const ShopAccessories = () => {
+  const consoleData = useSelector((state) => state.shopItems.accessories);
   const dispatch = useDispatch();
 
   //functions
   const handleAddToCartbutton = (item) => {
-    dispatch(addItemToCart(item))
+    dispatch(addItemToCart(item));
   };
 
   return (
@@ -48,4 +48,4 @@ const ShopVrs = () => {
   );
 };
 
-export default ShopVrs;
+export default ShopAccessories;

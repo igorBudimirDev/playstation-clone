@@ -7,6 +7,8 @@ import "../styles/shop.css";
 import ShopDualsense from "./ShopDualsense";
 import ShopVrs from "./ShopVrs";
 import ShopPSExperience from "./ShopPSExperience";
+import ShopAccessories from "./ShopAccessories";
+import ShopTheLastOfus from "./ShopTheLastOfus";
 
 const Shop = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -29,6 +31,8 @@ const Shop = () => {
       <ShopDualsense />
       <ShopVrs />
       <ShopPSExperience />
+      <ShopAccessories />
+      <ShopTheLastOfus />
       <div className="fixed top-[10%] right-[3%]">
         <button
           onClick={handleCartButton}
@@ -41,28 +45,35 @@ const Shop = () => {
         </button>
         {cartOpen && (
           <div className="absolute top-[105%] right-[50%] w-[500px] border-2 shadow-lg z-[999] bg-gray-100 animate-[opacityAndScale_0.5s_cubic-bezier(0.08,0.82,0.17,1)] animation-forwards origin-top-right flex flex-col transition-all duration-75">
-            <div className="flex items-center py-10 justify-evenly">
-              <span className="text-5xl font-light">${calculateTotalPrice().toFixed(2)}</span>
-              <button className="bg-main-orange font-semibold text-white w-[30%] py-2">Checkout</button>
-            </div>
-            <div className="cart-content flex flex-col overflow-y-auto max-h-[30em] scroll-smooth">
-              {cartItems.map((item) => {
-                return (
-                  <div className="flex justify-between items-center bg-white px-10 border-b py-3">
-                    <div className="flex items-start">
-                      <img className="" src={item.cart_img} alt="" />
-                      <div className="flex flex-col">
-                        <span className="max-w-[50%]">{item.name}</span>
-                        <span className="font-bold">{item.price}</span>
+            {cartItems.length > 0 ? (
+              <>
+                <div className="flex items-center py-10 justify-evenly">
+                  <span className="text-5xl font-light">${calculateTotalPrice().toFixed(2)}</span>
+                  <button className="bg-main-orange font-semibold text-white w-[30%] py-2">Checkout</button>
+                </div>
+                <div className="cart-content flex flex-col overflow-y-auto max-h-[30em] scroll-smooth">
+                  {cartItems.map((item) => {
+                    return (
+                      <div className="flex justify-between items-center bg-white px-10 border-b py-3">
+                        <div className="flex items-start">
+                          <img className="" src={item.cart_img} alt="" />
+                          <div className="flex flex-col">
+                            <span className="max-w-[50%]">{item.name}</span>
+                            <span className="font-bold">{item.price}</span>
+                          </div>
+                        </div>
+                        <div>
+                          <span className="">Qty: 1</span>
+                        </div>
                       </div>
-                    </div>
-                    <div>
-                      <span className="">Qty: 1</span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+                    );
+                  })}
+                </div>
+              </>
+            ) : (
+              <span className="text-gray-500 font-light text-xl text-center py-10">Your cart is currently empty.</span>
+            )}
+
           </div>
         )}
       </div>

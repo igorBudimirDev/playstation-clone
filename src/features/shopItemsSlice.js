@@ -9,6 +9,14 @@ import PSVRShop from "../assets/ps-vr-shop-item.webp";
 import PSVRForzaShop from "../assets/ps-vr-forza-shop-item.webp";
 import PSSVRenseShop from "../assets/ps-vr-sense-shop-item.png";
 import PSVRMini from "../assets/ps-vr-mini-cart.webp";
+import PinkDualsense1 from "../assets/pinkdualsense1.webp";
+import PinkDualsense2 from "../assets/pinkdualsense2.webp";
+import PinkPS5 from "../assets/pinkps5.webp";
+import PinkPS52 from "../assets/pinkps52.webp";
+import PinkDualsense1Small from "../assets/pinkdualsensesmall.webp";
+import PinkDualsense1Small2 from "../assets/pinkdualsense2small.webp";
+import PinPS5SMall from "../assets/pinkps5small.webp";
+import PinPS52SMall from "../assets/pinkps52small.webp";
 export const shopItemsSlice = createSlice({
   name: "shopItems",
   initialState: {
@@ -70,6 +78,40 @@ export const shopItemsSlice = createSlice({
         price: 49.99,
         img: PSSVRenseShop,
         cart_img: PSVRMini,
+      },
+    ],
+    accessories: [
+      {
+        id: 1,
+        available: true,
+        name: "DualSense™ Wireless Controller - Cosmic Red",
+        price: 74.99,
+        img: PinkDualsense1,
+        cart_img: PinkDualsense1Small,
+      },
+      {
+        id: 2,
+        available: true,
+        name: "DualSense™ Wireless Controller - Nova Pink",
+        price: 74.99,
+        img: PinkDualsense2,
+        cart_img: PinkDualsense1Small2,
+      },
+      {
+        id: 3,
+        available: true,
+        name: "PS5™ Console Covers - Cosmic Red",
+        price: 54.99,
+        img: PinkPS5,
+        cart_img: PinPS5SMall,
+      },
+      {
+        id: 3,
+        available: true,
+        name: "PS5™ Console Covers - Nova Pink",
+        price: 54.99,
+        img: PinkPS52,
+        cart_img: PinPS52SMall,
       },
     ],
   },

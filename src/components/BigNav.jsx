@@ -34,7 +34,7 @@ const BigNav = () => {
   const menuRef = useRef();
 
   return (
-    <div className="hidden md:block fixed w-[100%]">
+    <div className="hidden md:block fixed bg-white top-0 z-[999] left-0 w-[100%]">
       <div className="flex justify-end bg-black py-1 pr-3">
         <img src={SonyLogo} alt="SONY" />
       </div>

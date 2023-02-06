@@ -28,6 +28,10 @@ module.exports = {
           "0%": { transform: "translateY(20%)", opacity: 0 },
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
+        opacityAndScale: {
+          "0%": { opacity: 0, scale: 0 },
+          "100%": { opacity: 1, scale: 1 },
+        },
       },
     },
   },

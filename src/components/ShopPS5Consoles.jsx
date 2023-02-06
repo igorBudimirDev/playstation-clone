@@ -1,7 +1,14 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { GiShoppingCart } from "react-icons/gi";
+import { addItemToCart, removeItemFromCart, clearCart } from "../features/cartSlice";
 const ShopPS5Consoles = () => {
   const consoleData = useSelector((state) => state.shopItems.consoles);
+  const dispatch = useDispatch();
+
+  //functions
+  const handleAddToCartbutton = (item) => {
+    dispatch(addItemToCart(item))
+  };
 
   return (
     <div className="flex flex-col md:gap-5 transition-all duration-75">
@@ -10,7 +17,7 @@ const ShopPS5Consoles = () => {
         <p className="text-main-blue font-semibold">Exclusives, Bundles, and more</p>
       </div>
       <div className="flex justify-center">
-        <div className="flex items-center w-[100%] justify-center gap-[4em]">
+        <div className="flex items-center w-[100%] justify-center gap-[4em] overflow-x-scroll">
           {consoleData.map((data) => {
             return (
               <div className="flex flex-col max-w-[17em]">
@@ -18,11 +25,14 @@ const ShopPS5Consoles = () => {
                   <img src={data.img} className="max-w-[20em]" />
                 </div>
                 <div className="flex items-center gap-5">
-                  <span className="">{data.name.substring(0,30).concat('...')}</span>
+                  <span className="">{data.name.length > 40 ? data.name.substring(0, 30).concat("...") : data.name}</span>
                   <span className="font-bold">{data.price}</span>
                 </div>
                 {data.available ? (
-                  <button className="flex items-center border-2 text-lg border-main-orange max-w-[5em] py-2  text-main-orange justify-center">
+                  <button
+                    onClick={() => handleAddToCartbutton(data)}
+                    className="flex items-center border-2 text-lg border-main-orange max-w-[5em] py-2  text-main-orange justify-center"
+                  >
                     <span>Add</span>
                     <GiShoppingCart />
                   </button>

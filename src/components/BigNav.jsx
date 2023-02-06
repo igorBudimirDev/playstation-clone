@@ -34,16 +34,16 @@ const BigNav = () => {
   const menuRef = useRef();
 
   return (
-    <div className="hidden md:block">
+    <div className="hidden md:block fixed w-[100%]">
       <div className="flex justify-end bg-black py-1 pr-3">
         <img src={SonyLogo} alt="SONY" />
       </div>
-      <div className="flex justify-between px-5">
-        <div className="flex items-center">
+      <div className="flex justify-between px-5 bg-white">
+        <div className="flex items-center bg-white">
           <Link to="/">
             <SmallHeaderSonyIcon />
           </Link>
-          <div className="flex items-center gap-5 pl-4">
+          <div className="flex items-center gap-5 pl-4 bg-white">
             {sideMenuState.map((item) => {
               return (
                 <button onClick={() => handleSubmenuButton(item)} key={item.id} className="flex items-center">
@@ -61,7 +61,7 @@ const BigNav = () => {
       </div>
       {!sideMenuState.every((btn) => btn.active === false) && (
         <div ref={menuRef} className="flex flex-col">
-          <div ref={subChildrenRef} className="flex h-[10em]">
+          <div ref={subChildrenRef} className="flex h-[10em] bg-white">
             {sideMenuState.map((item, index) => {
               return (
                 item.active && (
@@ -79,7 +79,7 @@ const BigNav = () => {
               );
             })}
           </div>
-          <div className="flex justify-center gap-7 py-5">
+          <div className="flex justify-center gap-7 py-5 bg-white">
             {sideMenuState.map((item, index) => {
               return (
                 item.active &&

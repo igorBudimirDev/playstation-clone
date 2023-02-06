@@ -13,6 +13,7 @@ import PS4Pro from "../assets/hardware-discs.png";
 import PSStars from "../assets/ps_stars_logo.png";
 import PSBlog from "../assets/ps_blog.png";
 import PSCalendar from "../assets/ps_calendar.png";
+import MerchandiseLogo from "../assets/official_merchandise_logo.png"
 
 export const navData = [
   // {
@@ -120,8 +121,8 @@ export const navData = [
         link: "/shop"
       },
       {
-        name: "Digital Services",
-        imgURL: PSBuy,
+        name: "Official Merchandise",
+        imgURL: MerchandiseLogo,
         link: "/shop"
       },
     ],

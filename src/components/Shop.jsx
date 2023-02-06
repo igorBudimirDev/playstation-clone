@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ShopHero from "./ShopHero";
 import ShopPS5Consoles from "./ShopPS5Consoles";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { GiShoppingCart } from "react-icons/gi";
 import "../styles/shop.css";
 import ShopDualsense from "./ShopDualsense";
@@ -11,6 +11,7 @@ import ShopAccessories from "./ShopAccessories";
 import ShopTheLastOfus from "./ShopTheLastOfus";
 
 const Shop = () => {
+  const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
   const [cartOpen, setCartopen] = useState(false);
   //functions
@@ -18,6 +19,7 @@ const Shop = () => {
   const handleCartButton = () => {
     setCartopen(!cartOpen);
   };
+
 
   const calculateTotalPrice = () => {
     let price = 0;
@@ -62,9 +64,7 @@ const Shop = () => {
                             <span className="font-bold">{item.price}</span>
                           </div>
                         </div>
-                        <div>
-                          <span className="">Qty: 1</span>
-                        </div>
+                        <div></div>
                       </div>
                     );
                   })}
@@ -73,7 +73,6 @@ const Shop = () => {
             ) : (
               <span className="text-gray-500 font-light text-xl text-center py-10">Your cart is currently empty.</span>
             )}
-
           </div>
         )}
       </div>

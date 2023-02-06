@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { GiShoppingCart } from "react-icons/gi";
-import { addItemToCart, removeItemFromCart, clearCart } from "../features/cartSlice";
+import { addItemToCart, clearCart } from "../features/cartSlice";
 const ShopPS5Consoles = () => {
   const consoleData = useSelector((state) => state.shopItems.consoles);
   const dispatch = useDispatch();

@@ -16,6 +16,10 @@ module.exports = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        dissapear: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
         sideMenuEnter: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0)" },
@@ -31,6 +35,10 @@ module.exports = {
         opacityAndScale: {
           "0%": { opacity: 0, scale: 0 },
           "100%": { opacity: 1, scale: 1 },
+        },
+        opacityAndReverse: {
+          "0%": { opacity: 1, scale: 1 },
+          "100%": { opacity: 0, scale: 0 },
         },
       },
     },

@@ -3,16 +3,16 @@ import { createSlice } from "@reduxjs/toolkit";
 export const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    items: [
- 
-    ]
+    items: [],
   },
   reducers: {
     addItemToCart: (state, action) => {
-      state.items.push(action.payload)
+      state.items.push(action.payload);
     },
-   
-    clearCart: (state) => {},
+
+    clearCart: (state) => {
+      state.items = [];
+    },
   },
 });
 

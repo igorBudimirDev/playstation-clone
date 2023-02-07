@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ShopHero from "./ShopHero";
 import ShopPS5Consoles from "./ShopPS5Consoles";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,17 +9,46 @@ import ShopVrs from "./ShopVrs";
 import ShopPSExperience from "./ShopPSExperience";
 import ShopAccessories from "./ShopAccessories";
 import ShopTheLastOfus from "./ShopTheLastOfus";
+import { clearCart } from "../features/cartSlice";
 
 const Shop = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
   const [cartOpen, setCartopen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const cartRef = useRef();
+  const loaderRef = useRef();
+  const successRef = useRef();
+  const cartWrapperRef = useRef();
   //functions
 
   const handleCartButton = () => {
     setCartopen(!cartOpen);
   };
 
+  const handleCheckoutButton = () => {
+    setIsLoading(true);
+    cartRef.current.classList.add("animate-[dissapear_0.2s_ease]");
+    cartRef.current.classList.add("animation-forwards");
+    if (loaderRef.current) {
+      loaderRef.current.classList.add("animate-[appear_1s_ease]");
+      loaderRef.current.classList.add("animation-forwards");
+    }
+    setTimeout(() => {
+      loaderRef.current.classList.remove("animate-appear_1s_ease");
+      loaderRef.current.classList.remove("animation-forwards");
+      successRef.current.classList.add("animate-[appear_1s_ease]");
+      successRef.current.classList.add("animation-forwards");
+      setTimeout(() => {
+        cartWrapperRef.current.classList.add("animate-[opacityAndReverse_0.3s_ease]");
+        dispatch(clearCart());
+        setTimeout(() => {
+          cartWrapperRef.current.classList.remove("animate-[opacityAndReverse_0.3s_ease]")
+          setCartopen(false);
+        }, 400)
+      }, 2000);
+    }, 3000);
+  };
 
   const calculateTotalPrice = () => {
     let price = 0;
@@ -46,12 +75,26 @@ const Shop = () => {
           </div>
         </button>
         {cartOpen && (
-          <div className="absolute top-[105%] right-[50%] w-[500px] border-2 shadow-lg z-[999] bg-gray-100 animate-[opacityAndScale_0.5s_cubic-bezier(0.08,0.82,0.17,1)] animation-forwards origin-top-right flex flex-col transition-all duration-75">
+          <div
+            ref={cartWrapperRef}
+            className="absolute top-[105%] right-[50%] w-[500px] border-2 shadow-lg z-[999] bg-gray-100 animate-[opacityAndScale_0.5s_cubic-bezier(0.08,0.82,0.17,1)] animation-forwards origin-top-right flex flex-col transition-all duration-75"
+          >
+            <div ref={loaderRef} className="absolute top-[45%] left-[50%] translate-x-[-50%] opacity-0">
+              <span className="loader"></span>
+            </div>
+            <div ref={successRef} className="absolute top-[45%] left-[50%] translate-x-[-50%] opacity-0">
+              <span className="text-xl font-light min-w-[20em] left-[-8em] text-green-400 absolute">
+                You have purchased {cartItems.length} items successfully!
+              </span>
+            </div>
+
             {cartItems.length > 0 ? (
-              <>
+              <div ref={cartRef}>
                 <div className="flex items-center py-10 justify-evenly">
                   <span className="text-5xl font-light">${calculateTotalPrice().toFixed(2)}</span>
-                  <button className="bg-main-orange font-semibold text-white w-[30%] py-2">Checkout</button>
+                  <button onClick={handleCheckoutButton} className="bg-main-orange font-semibold text-white w-[30%] py-2">
+                    Checkout
+                  </button>
                 </div>
                 <div className="cart-content flex flex-col overflow-y-auto max-h-[30em] scroll-smooth">
                   {cartItems.map((item) => {
@@ -69,7 +112,7 @@ const Shop = () => {
                     );
                   })}
                 </div>
-              </>
+              </div>
             ) : (
               <span className="text-gray-500 font-light text-xl text-center py-10">Your cart is currently empty.</span>
             )}

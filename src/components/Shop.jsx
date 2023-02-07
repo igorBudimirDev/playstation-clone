@@ -37,16 +37,17 @@ const Shop = () => {
     setTimeout(() => {
       loaderRef.current.classList.remove("animate-appear_1s_ease");
       loaderRef.current.classList.remove("animation-forwards");
-      successRef.current.classList.add("animate-[appear_1s_ease]");
+      successRef.current.classList.add("animate-[appear_0.5s_ease]");
       successRef.current.classList.add("animation-forwards");
       setTimeout(() => {
         cartWrapperRef.current.classList.add("animate-[opacityAndReverse_0.3s_ease]");
-        dispatch(clearCart());
+
         setTimeout(() => {
-          cartWrapperRef.current.classList.remove("animate-[opacityAndReverse_0.3s_ease]")
+          cartWrapperRef.current.classList.remove("animate-[opacityAndReverse_0.3s_ease]");
           setCartopen(false);
-        }, 400)
-      }, 2000);
+          dispatch(clearCart());
+        }, 400);
+      }, 3000);
     }, 3000);
   };
 

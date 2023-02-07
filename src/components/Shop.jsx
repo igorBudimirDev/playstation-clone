@@ -40,7 +40,7 @@ const Shop = () => {
       successRef.current.classList.add("animate-[appear_0.5s_ease]");
       successRef.current.classList.add("animation-forwards");
       setTimeout(() => {
-        cartWrapperRef.current.classList.add("animate-[opacityAndReverse_0.3s_ease]");
+        cartWrapperRef.current.classList.add("animate-[opacityAndReverse_0.4s_ease]");
 
         setTimeout(() => {
           cartWrapperRef.current.classList.remove("animate-[opacityAndReverse_0.3s_ease]");
